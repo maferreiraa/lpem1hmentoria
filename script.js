@@ -1,14 +1,12 @@
-
 // =========================================================
 // CONFIGURAÇÃO DO CONTADOR
 // =========================================================
 // Modo automático: o contador sempre mostra 48h a partir
 // da primeira visita da pessoa.
-// Para alterar a duração, mude o número abaixo.
 const COUNTDOWN_HOURS = 48;
 
-// Para usar uma data fixa, descomente a linha abaixo e coloque sua data.
-// Exemplo: const FIXED_DEADLINE = "2026-06-01T23:59:59-03:00";
+// Para usar uma data fixa, troque null por algo como:
+// "2026-06-01T23:59:59-03:00"
 const FIXED_DEADLINE = null;
 
 function getDeadline() {
@@ -67,8 +65,6 @@ setInterval(updateCountdown, 1000);
 // =========================================================
 // EVENTOS DE CLIQUE — PIXEL / GA4 / CLARITY
 // =========================================================
-// Estes eventos só funcionam quando você colar os scripts
-// oficiais do Meta Pixel, Google Analytics e Clarity no <head>.
 
 function trackEvent(eventName, params = {}) {
   // Meta Pixel
